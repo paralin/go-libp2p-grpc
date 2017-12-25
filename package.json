@@ -1,0 +1,20 @@
+{
+  "author": "paralin",
+  "bugs": {
+    "url": "github.com/paralin/go-libp2p-grpc/issues"
+  },
+  "gx": {
+    "dvcsimport": "github.com/paralin/go-libp2p-grpc"
+  },
+  "gxDependencies": [
+    {
+      "author": "whyrusleeping",
+      "hash": "QmUhvp4VoQ9cKDVLqAxciEKdm8ymBx2Syx4C1Tv6SmSTPa",
+      "name": "go-libp2p-swarm",
+      "version": "2.1.2"
+    }
+  ],
+  "gxVersion": "0.12.1",
+  "license": "MIT"
+}
+

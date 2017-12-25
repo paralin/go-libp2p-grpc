@@ -1,0 +1,20 @@
+syntax = "proto3";
+package echosvc;
+
+// EchoRequest is the argument to the Echo call.
+message EchoRequest {
+  // Message is the message to echo.
+  string message = 1;
+}
+
+message EchoReply {
+  // Message is the message that was requested, echo'd back.
+  string message = 1;
+  // PeerId is the peer that responded.
+  string peer_id = 2;
+}
+
+service EchoService {
+  // Echo asks a node to respond with a message.
+  rpc Echo(EchoRequest) returns (EchoReply) {}
+}

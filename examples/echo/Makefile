@@ -1,0 +1,14 @@
+gengo:
+	shopt -s globstar; \
+	protowrap -I $${GOPATH}/src \
+		--go_out=plugins=grpc:$${GOPATH}/src \
+		--proto_path $${GOPATH}/src \
+		--print_structure \
+		--only_specified_files \
+		$$(pwd)/*/*.proto
+	go install -v ./...
+
+deps:
+	go get -v google.golang.org/grpc
+	go get -u -v github.com/golang/protobuf/protoc-gen-go
+	go get -v github.com/square/goprotowrap/cmd/protowrap
